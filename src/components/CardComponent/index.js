@@ -9,7 +9,7 @@ export default function CardComponent({ title, text, path }) {
         backgroundColor: "rgba(1,2,3,0.5)",
       }}
     >
-      <Row inline style={{ justifyContent: "center" }}>
+      <Row inline style={{ justifyContent: "center", margin: 0 }}>
         <Col sm='8'>
           <Card
             body
@@ -19,7 +19,7 @@ export default function CardComponent({ title, text, path }) {
           >
             <CardTitle tag='h5'>{title}</CardTitle>
             <CardText>{text}</CardText>
-            <div className='mt-3 mb-3 d-flex justify-content-center '>
+            <div className='d-flex justify-content-center '>
               <Button href={path}>Saiba Mais</Button>
             </div>
           </Card>
