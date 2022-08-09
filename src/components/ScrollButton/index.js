@@ -33,4 +33,8 @@ const ScrollButton = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ScrollButton;
+=======
+export default ScrollButton;
+>>>>>>> 883efe1fe757a8e549f406628ea07ad8136ed11f
