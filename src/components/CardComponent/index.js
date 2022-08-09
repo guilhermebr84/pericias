@@ -4,7 +4,7 @@ import { Row, Col, Card, CardTitle, CardText, Button } from "reactstrap";
 export default function CardComponent({ title, text, path }) {
   return (
     <div
-      className='pt-5 pb-5 mb-5 mt-5'
+      className='pt-5 pb-5 '
       style={{
         backgroundColor: "rgba(1,2,3,0.5)",
       }}
