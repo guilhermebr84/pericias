@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
-import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css"
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import NavbarComponent from "./components/NavbarComponent";
+import { Fragment } from "react";
+import ScrollButton from "./components/ScrollButton/index";
 
-import Navbar from './components/Navbar';
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Clients from "./pages/Clients";
+import Contact from "./pages/Contact";
 
-function App() {
-  const [state, setState] = useState([]);
-  const [loading, setLoading] = useState(false);
+export default function App() {
   return (
-    <div>
-    <Navbar />
-    {/* <div className="container mt-5">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/newbet" element={<NewBet />} />
-        <Route path="/readbet" element={<ReadBet />} />
-        <Route path="/readapi" element={<ReadAPI />} />
-        <Route path="/update/:id" element={<UpdateBet />} />
-        <Route path="/delete/:id" element={<DeleteBet />} />
-        <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </div> */}
-  </div>
-);
+    <Fragment>
+      <BrowserRouter>
+        <NavbarComponent />
+        <Routes path='/'>
+          <Route index element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='clients' element={<Clients />} />
+          <Route path='contact' element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+      <ScrollButton />
+    </Fragment>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
