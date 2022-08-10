@@ -57,7 +57,7 @@ function Example(props) {
       <CarouselItem
         className='custom-tag'
         tag='div'
-        key={item.id}
+        key={item.key}
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
       >
